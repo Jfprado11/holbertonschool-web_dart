@@ -3,7 +3,7 @@ class User {
   int? age;
   double? height;
 
-  User(String name, int age, double height) {
+  User({name: String, age: int, height: double}) {
     this.name = name;
     this.age = age;
     this.height = height;
