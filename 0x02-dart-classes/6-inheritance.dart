@@ -7,18 +7,13 @@ class User extends Password {
   int? id;
   String user_password = '';
 
-  User(
-      {id: int,
-      name: String,
-      age: int,
-      height: double,
-      user_password: String}): super(password: user_password) {
+  User({id: int, name: String, age: int, height: double, user_password: String})
+      : super(password: user_password) {
     this.id = id;
     this.name = name;
     this.age = age;
     this.height = height;
     this.user_password = user_password;
-
   }
 
   static User fromJson(Map<dynamic, dynamic> userJson) {
@@ -43,6 +38,6 @@ class User extends Password {
   String toString() {
     final pass = new Password(password: this.user_password);
 
-    return 'User(id : ${this.id} ,name: ${this.name}, age: ${this.age}, height: ${this.height}), Password: ${pass.isValid()}';
+    return 'User(id : ${this.id} ,name: ${this.name}, age: ${this.age}, height: ${this.height}, Password: ${pass.isValid()})';
   }
 }
